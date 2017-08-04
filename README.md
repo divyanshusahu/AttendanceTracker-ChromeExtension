@@ -1,4 +1,4 @@
-## This is the Atttendance tracker a chrome extension.
+## This is the Attendance tracker a chrome extension.
 
 #### This extension is made using AngularJS
 
