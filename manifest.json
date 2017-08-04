@@ -3,7 +3,7 @@
 
   "name": "Time-Pass",
   "description": "Keep track of your attendence",
-  "version": "1.0",
+  "version": "2.0",
 
   "browser_action": {
     "default_popup": "index.html",

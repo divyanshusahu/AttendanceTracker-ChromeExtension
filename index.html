@@ -13,7 +13,7 @@
 		<h4><b>{{ title }}</b></h4>
 		<input type="text" name="add-course" placeholder="Add Course" id="addCoursesText">
 		<button type="button" class="btn btn-primary" id="addCoursesButton" ng-click="addCourse()">Add Course</button>
-		<button type="button" class="btn btn-default" id="closeButton" ng-click="close()">X</button>
+		<button type="button" class="btn btn-default" id="closeButton" ng-click="close()"><b>X</b></button>
 		<button class="btn btn-info" id="addCoursesDemo">Add course</button>
 	</center>
 	<table>
@@ -22,13 +22,18 @@
 				<th>Course Name</th>
 				<th>No of Absents</th>
 				<th>Add</th>
+				<th>Sub</th>
 			</tr>
 			<tr ng-repeat="course in courses track by $index">
 				<td> {{ course.name }} </td>
 				<td> {{ course.noOfAbsents }} </td>
 				<td><button type="button" class="btn btn-danger" id="add-absent" ng-click="plusOne($index)">+</button></td>
+				<td><button type="button" class="btn btn-success" id="removeAbsent" ng-click="minusOne($index)">-</button></td>
 			</tr>
 		</tbody>
 	</table>
+	<center>
+		<button type="button" class="btn btn-danger" ng-click="resetAll()">Reset All</button>
+	</center>
 </body>
 </html>

@@ -13,10 +13,18 @@ var app = angular.module("myApp", []);
 // mainController.js
 app.controller('MainController', ['$scope', function($scope) { 
   $scope.title = 'Keep track of your attendence'; 
-  $scope.plusOne = function(index) { 
+  $scope.plusOne = function(index) {    // function that add number of absent
   	$scope.courses[index].noOfAbsents += 1; 
   	localStorage.setItem('courses', JSON.stringify($scope.courses)); // stores no of absent locally
 	};
+	$scope.minusOne = function(index) {   // function that substract number of absent
+  	$scope.courses[index].noOfAbsents -= 1; 
+  	localStorage.setItem('courses', JSON.stringify($scope.courses)); // stores no of absent locally
+	};
+	$scope.resetAll = function(){
+		$scope.courses = [];   // deletes all the values from the array
+		localStorage.setItem('courses', JSON.stringify($scope.courses));
+	}
 
 	$scope.saved = localStorage.getItem('courses'); // get locally saved variable
 	$scope.courses = (localStorage.getItem('courses')!==null) ? JSON.parse($scope.saved) : [ ]; // conversion to display correctly
