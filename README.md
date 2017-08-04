@@ -1,6 +1,6 @@
-##This is the Atttendance tracker a chrome extension.
+## This is the Atttendance tracker a chrome extension.
 
-####This extension is made using AngularJS
+#### This extension is made using AngularJS
 
 **How to load the extension**
 1) Visit chrome://extensions in your browser.
