@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Time-Pass",
-  "description": "Keep track of your attendence",
+  "description": "Keep track of your attendance",
   "version": "2.0",
 
   "browser_action": {
