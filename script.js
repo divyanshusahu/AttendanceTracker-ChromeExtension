@@ -12,7 +12,7 @@ var app = angular.module("myApp", []);
 
 // mainController.js
 app.controller('MainController', ['$scope', function($scope) { 
-  $scope.title = 'Keep track of your attendence'; 
+  $scope.title = 'Keep track of your attendance'; 
   $scope.plusOne = function(index) {    // function that add number of absent
   	$scope.courses[index].noOfAbsents += 1; 
   	localStorage.setItem('courses', JSON.stringify($scope.courses)); // stores no of absent locally
