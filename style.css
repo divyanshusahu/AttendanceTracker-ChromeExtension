@@ -1,0 +1,29 @@
+body{
+	padding:10px;
+	width: 400px;
+	background-color: lightgrey;
+}
+input[name="add-course"]{
+	padding: 2px;
+	font-size: 16px;
+	display: none;
+}
+#addCoursesButton{
+	display: none;
+}
+#closeButton{
+	border-radius: 100%;
+	display: none;
+}
+table{
+	width: 100%;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+th,td{
+	padding: 10px;
+	border: 1px solid black;
+}
+#add-absent{
+	border-radius: 100%;
+}
