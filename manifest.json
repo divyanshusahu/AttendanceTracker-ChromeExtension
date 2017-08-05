@@ -3,7 +3,7 @@
 
   "name": "Time-Pass",
   "description": "Keep track of your attendance",
-  "version": "2.0",
+  "version": "2.1",
 
   "browser_action": {
     "default_popup": "index.html",
@@ -12,5 +12,7 @@
   "permissions": [
     "activeTab"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "author":"Divyanshu Sahu",
+  "icons":{ "48":"icon.png" }
 }

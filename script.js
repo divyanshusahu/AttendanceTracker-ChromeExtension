@@ -6,6 +6,20 @@ $(document).ready(function(){
 		$('#closeButton').fadeIn();
 	});
 });
+$(document).ready(function(){
+	$("#resetPrompt").click(function(){
+		$('#resetPrompt').fadeOut(1);
+		$('.resetAll').fadeIn();
+	});
+	$("#backToPrompt").click(function(){
+		$(".resetAll").fadeOut(1);
+		$("#resetPrompt").fadeIn();
+	});
+	$("#resetDone").click(function(){
+		$(".resetAll").fadeOut(1);
+		$("#resetPrompt").fadeIn();
+	});
+});
 
 // app.js 
 var app = angular.module("myApp", []);
@@ -23,8 +37,14 @@ app.controller('MainController', ['$scope', function($scope) {
 	};
 	$scope.resetAll = function(){
 		$scope.courses = [];   // deletes all the values from the array
-		localStorage.setItem('courses', JSON.stringify($scope.courses));
+		localStorage.setItem('courses', JSON.stringify($scope.courses)); // saves array locally
 	}
+	/*$scope.delOne = function(index){
+		var ind = $scope.courses.indexOf(index);
+		if (ind > -1)
+			$scope.courses.splice(ind,1);
+		localStorage.setItem('courses', JSON.stringify($scope.courses));
+	};*/
 
 	$scope.saved = localStorage.getItem('courses'); // get locally saved variable
 	$scope.courses = (localStorage.getItem('courses')!==null) ? JSON.parse($scope.saved) : [ ]; // conversion to display correctly
